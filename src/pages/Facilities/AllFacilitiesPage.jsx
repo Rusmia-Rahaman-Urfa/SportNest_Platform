@@ -16,7 +16,7 @@ const AllFacilitiesPage = () => {
   const [page,       setPage]       = useState(1);
   const [debSearch,  setDebSearch]  = useState(search);
 
-  // Debounce search — triggers $regex on server
+  // Debounce search that triggers $regex on server
   useEffect(() => {
     const t = setTimeout(() => setDebSearch(search), 400);
     return () => clearTimeout(t);
